@@ -1,12 +1,1 @@
-{
-  "tests": [
-    {
-      "name": "Get market prices",
-      "method": "GET",
-      "path": "/",
-      "expectedStatus": 200,
-      "expectedBody": {"coins": []},
-      "bodyMatcher": "partial"
-    }
-  ]
-}
+{"tests":[{"name":"GET market","method":"GET","path":"/","expectedStatus":200,"expectedBody":{"ts":0},"bodyMatcher":"partial"}]}
