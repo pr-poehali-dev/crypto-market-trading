@@ -1,5 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Icon from "@/components/ui/icon";
+import AuthPage from "@/pages/AuthPage";
+import { api, User, MarketCoin, TradeTx } from "@/lib/api";
 
 // ─── Types ───────────────────────────────────────────────────────────────────
 type Page = "home" | "trade" | "portfolio" | "analytics" | "history" | "deposit" | "withdraw" | "profile";

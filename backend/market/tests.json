@@ -1,0 +1,12 @@
+{
+  "tests": [
+    {
+      "name": "Get market prices",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 200,
+      "expectedBody": {"coins": []},
+      "bodyMatcher": "partial"
+    }
+  ]
+}

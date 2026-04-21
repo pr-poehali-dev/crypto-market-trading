@@ -1,0 +1,26 @@
+{
+  "tests": [
+    {
+      "name": "OPTIONS preflight",
+      "method": "OPTIONS",
+      "path": "/",
+      "expectedStatus": 200
+    },
+    {
+      "name": "Get rates (no auth needed)",
+      "method": "POST",
+      "path": "/",
+      "body": {"action": "rates"},
+      "expectedStatus": 200,
+      "expectedBody": {"USDT_RUB": 92.5},
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Balance without auth",
+      "method": "POST",
+      "path": "/",
+      "body": {"action": "balance"},
+      "expectedStatus": 401
+    }
+  ]
+}
